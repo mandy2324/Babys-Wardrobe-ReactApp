@@ -11,6 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.App{
+#header{
   background-image: url("./images/rainbow-bg.png");
 }
+.recycle{
+  background-image: url("./images/recycle.jpg");
+padding: 5%;
+color: rgba(25, 30, 3, 0.854);
+  margin: 2%;}
+  a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgba(6, 44, 6, 0.854);
+  }
+  .form-control{
+    width: 30%;
+  }
+  #login{
+    margin-top: 6rem;
+    max-width: 60%;
+    background-image: url("./images/loginbag.png");
+  }
+  
