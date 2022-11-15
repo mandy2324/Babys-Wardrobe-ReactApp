@@ -24,3 +24,12 @@ color: rgba(25, 30, 3, 0.854);
     font-weight: bold;
     color: rgba(6, 44, 6, 0.854);
   }
+  .form-control{
+    width: 30%;
+  }
+  #login{
+    margin-top: 6rem;
+    max-width: 60%;
+    background-image: url("./images/loginbag.png");
+  }
+  
