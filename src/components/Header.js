@@ -19,9 +19,9 @@ const Header = () => {
                 <div className="navbar-nav font-weight-bold">
 
                     <Link className="nav-link font-weight-bold" to="/cart">Cart</Link>
-                    <Link className="nav-link font-weight-bold" to="/recycle">Recycle</Link>
                     <Link className="nav-link font-weight-bold" to="/login">Login</Link>
                     <Link className="nav-link font-weight-bold" to="/signup">Signup</Link>
+                    <Link className="nav-link font-weight-bold" to="/recycle">Recycle</Link>
 
                 </div>
                 </div>
