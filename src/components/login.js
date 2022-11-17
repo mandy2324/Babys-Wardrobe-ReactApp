@@ -6,8 +6,8 @@ const Login = () => {
     const handleLogin = (event) => {
         let username = document.getElementById('username').value
         let password = document.getElementById('password').value
-        //AuthApi.authenticate(username, password)
-        AuthApi.authenticate('admin', '123')
+        AuthApi.authenticate(username, password)
+        // AuthApi.authenticate('admin', '123')
     }
 
     return (

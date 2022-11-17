@@ -30,7 +30,7 @@ a {
 }
 
 .form-control {
-  width: 30%;
+  width: 50%;
 }
 
 #login {
@@ -60,3 +60,10 @@ max-width: 100%;
   display: block;
   margin: auto;
 } 
+#signup{
+  margin-top: 10rem;
+  max-width: 100%;
+background-image: url("https://i0.wp.com/luamaralstudio.com/wp-content/uploads/2020/09/Aesthetic-fall-autumn-computer-wallpaper-backgrounds-desktop-31.png?resize=980%2C551");
+
+
+}
