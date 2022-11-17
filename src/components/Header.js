@@ -17,14 +17,12 @@ const Header = () => {
 
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav font-weight-bold">
-
-                    <Link className="nav-link font-weight-bold" to="/cart">Cart</Link>
-                    <Link className="nav-link font-weight-bold" to="/login">Login</Link>
-                    <Link className="nav-link font-weight-bold" to="/signup">Signup</Link>
-                    <Link className="nav-link font-weight-bold" to="/addProd">Add-Product</Link>
-                    <Link className="nav-link font-weight-bold" to="/products">View-Products</Link>
-                    <Link className="nav-link font-weight-bold" to="/recycle">Recycle</Link>
-
+                            <Link className="nav-link font-weight-bold" to="/cart">Cart</Link>
+                            <Link className="nav-link font-weight-bold" to="/login">Login</Link>
+                            <Link className="nav-link font-weight-bold" to="/signup">Signup</Link>
+                            <Link className="nav-link font-weight-bold" to="/addProd">Add-Product</Link>
+                            <Link className="nav-link font-weight-bold" to="/products">View-Products</Link>
+                            <Link className="nav-link font-weight-bold" to="/recycle">Recycle</Link>
                         </div>
                     </div>
                 </div>

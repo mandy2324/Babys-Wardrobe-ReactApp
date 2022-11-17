@@ -5,9 +5,9 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Recycle from './components/Recycle';
 import Login from './components/login';
-import Signup from './components/signup';
-import Product from './components/products';
-
+import Signup from './components/Signup';
+import ProductsView from './components/ProductsView';
+import CreateProducts from './components/CreateProducts';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -39,7 +39,8 @@ function App() {
         <Route path="/recycle" element={<Recycle />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/products" element={<Product
+        <Route path="/addProd" element={<CreateProducts/>} />
+        <Route path="/products" element={<ProductsView
           cart={cart}
           addProduct={addProduct}
           removeProduct={removeProduct}
@@ -51,4 +52,3 @@ function App() {
 }
 
 export default App;
-
