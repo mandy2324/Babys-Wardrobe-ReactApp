@@ -1,67 +1,68 @@
-
-// const BASE = "http://localhost:8080"  // use this if running locally
-const BASE = "http://0.0.0.0:8080" // edit this with your AWS endpoint
+const BASE = "http://localhost:8080"  // use this if running locally
+//const BASE = "http://0.0.0.0:8080" // edit this with your AWS endpoint
 const URI = BASE + "/api"
 
 const ProdApi = {
-    
+
     getAll: (setProductList) => {
 
-        fetch(URI + "/api/clothes")
-            .then( result => result.json() )
-            .then( data => {
+        fetch(URI + "/clothes")
+            .then(result => result.json())
+            .then(data => {
                 setProductList(data)
-            } )
-            .catch( error => { console.log(error) } )
+            })
+            .catch(error => { console.log(error) })
     },
 
     add: (product) => {
-        
-        fetch(URI + "/api/clothes", {
+
+        fetch(URI + "/clothes", {
             method: "POST",
             body: JSON.stringify(product),
-            headers: { "Content-Type": "application/json" }
+            headers: { "Content-Type": "application/json",
+                        "Authorization": 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2OTA0NDcwNywiaWF0IjoxNjY4Njk5MTA3fQ.U2v6b0G4jLdbEkuRR1vhBBMQMcVyArrm0ZnIghKKLhI'
+                    }
         })
-            .then( result => result.json() )
-            .then( data => {
+            .then(result => result.json())
+            .then(data => {
 
-                if(typeof data.id !== 'undefined') {
+                if (typeof data.id !== 'undefined') {
 
                     console.log("CREATED PRODUCT:");
                     console.log(data);
 
                     alert(`PRODUCT CREATED \n` +
-                        `------------------------\n` + 
+                        `------------------------\n` +
                         `ID: ${data.id}\n` +
-                        `First Name: ${data.firstName}\n` +
-                        `Last Name: ${data.lastName}\n` +
-                        `Email: ${data.email}\n` +
-                        `Department: ${data.department}\n` +
+                        `Name: ${data.name}\n` +
+                        `Gender: ${data.gender}\n` +
+                        `Age Group: ${data.age}\n` +
+                        `Colors: ${data.color}\n` +
                         `Image Path: ${data.imagePath}`
                     )
                 }
                 else {
-                    alert("product can't be created, check that you are not using an email already in use by another product.")
+                    alert("Failed to create product")
                 }
 
-            } )
-            .catch( error => { 
+            })
+            .catch(error => {
                 console.log(error);
-            } )
+            })
 
     },
 
     update: (product, productList, setProductList) => {
 
-        fetch(URI + "/api/clothes",  {
+        fetch(URI + "/clothes", {
             method: 'PUT',
             body: JSON.stringify(product),
-            headers: {  "Content-Type": "application/json" }
+            headers: { "Content-Type": "application/json" }
         })
-            .then( result => result.json() )
-            .then( data => {
+            .then(result => result.json())
+            .then(data => {
 
-                if(typeof data.id !== 'undefined') {
+                if (typeof data.id !== 'undefined') {
 
                     console.log("UPDATED:");
                     console.log(data);
@@ -70,9 +71,9 @@ const ProdApi = {
 
                     let index = -1;
 
-                    for(let i = 0; i < newList.length; i++) {
+                    for (let i = 0; i < newList.length; i++) {
 
-                        if( newList[i].id === data.id ) {
+                        if (newList[i].id === data.id) {
                             index = i;
                             break;
                         }
@@ -83,24 +84,24 @@ const ProdApi = {
                     setProductList(newList)
                 }
                 else {
-                    alert("Error updating product, email choosen may already be in use by another product")
+                    alert("Failed to update product")
                 }
-                
-            } )
+
+            })
             .catch(error => { console.log(error); })
 
     },
 
     delete: (id) => {
 
-        fetch(URI + "/api/clothes/" + id, {
+        fetch(URI + "/clothes/" + id, {
             method: "DELETE"
         })
-            .then( result => result.json() )
-            .then( data => {
+            .then(result => result.json())
+            .then(data => {
                 console.log("DELETED:");
                 console.log(data);
-            } )
+            })
             .catch(error => { console.log(error); })
 
     }

@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import ProdApi from '../projectApi/ProdApi';
 
-
-
 const CreateProducts = () => {
 
     const [product, setProduct] = useState({
-        id: 0,
+        id: '',
         name: '',
         type: '',
         gender: '',
@@ -24,15 +22,19 @@ const CreateProducts = () => {
     }
 
     const handleSubmit = (event) => {
+        // Convert color input into an array
+        product.color=product.color.toString().split(',')
+        console.log(product)    // TODO delete this
 
         ProdApi.add(product)
+        
 
         event.preventDefault()
     }
 
     const clearForm = () => {
         setProduct({
-            id: 0,
+            id: '',
             name: '',
             type: '',
             gender: '',
@@ -77,7 +79,6 @@ const CreateProducts = () => {
                             required
                         />
                     </div>
-
 
 
                     {/* Gender INPUT */}
