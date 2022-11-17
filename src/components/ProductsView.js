@@ -64,6 +64,8 @@ const ProductsView = (props) => {
                         product={p}
                         productList={productList}
                         cart={props.cart}
+                        addProduct={props.addProduct}
+                        removeProduct={props.removeProduct}
                         setProductList={setProductList}
                         setToEdit={setToEdit}
                     />
