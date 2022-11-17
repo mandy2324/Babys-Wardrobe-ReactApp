@@ -1,5 +1,6 @@
-import React from 'react';
-import ProdApi from '../projectApi/ProdApi';
+import React, { useEffect, useState } from 'react';
+import AuthApi from '../projectApi/AuthApi';
+
 
 
 const ProductCard= ( props) => {
@@ -28,6 +29,7 @@ const ProductCard= ( props) => {
                  />
 
             <div className='card-body'>
+
                 <h5 className='card-title'>{name}</h5>
                 <p><strong>ID: </strong>{props.product.id}</p>
                 <p><strong>NAME </strong>{props.product.name}</p>
@@ -37,6 +39,29 @@ const ProductCard= ( props) => {
                 <p><strong>COLOR </strong>{props.product.color}</p>
 
                 <p><strong>PRICE </strong>{props.product.price}</p>
+                  
+                {
+                    !inCart &&
+                    <button className='btn btn-primary card-btn'
+                        onClick={() => { props.addProduct(props.product) }}
+                    >
+                        Add to Cart
+                    </button>
+                }
+                {
+                    inCart &&
+                    <button className='btn btn-primary card-btn'
+                        onClick={() => { props.removeProduct(props.product.id) }}
+                    >
+                        Remove from Cart
+                    </button>
+                }
+
+                <button className='btn btn-primary card-btn'
+                    onClick={() => { AuthApi.authenticate('admin', '123') }}
+                >
+                    Login
+                </button>
 
                 <button className='btn btn-primary card-btn'
                         data-bs-toggle="offcanvas" 

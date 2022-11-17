@@ -162,12 +162,6 @@ const CreateProducts = () => {
                         />
                     </div>
 
-
-
-
-
-
-
                     {/* IMAGE PATH INPUT */}
                     <div className='mb-3'>
                         <label htmlFor='product-image-path'
