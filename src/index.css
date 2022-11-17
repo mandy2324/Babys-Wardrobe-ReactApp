@@ -11,10 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-#header{
+
+#header {
   background-image: url("./images/rainbow-bg.png");
 }
-.recycle{
+
+.recycle {
   background-image: url("./images/recycle.jpg");
 padding: 5%;
 color: rgba(25, 30, 3, 0.854);
@@ -36,4 +38,20 @@ color: rgba(25, 30, 3, 0.854);
     margin-top: 10rem;
 
     background-image: url("https://img.freepik.com/premium-vector/seamless-pattern-baby-clothes-pastel-color-vector-illustration-infant-cute-repeated-print_515275-259.jpg");
+  }
+
+  .product-img {
+    width: 15vw;
+    height: auto;
+  }
+  
+  .card {
+    width: 15vw;
+    margin: 0.5rem;
+    display: inline-block;
+  }
+  
+  .card-btn {
+    display: block;
+    margin: auto;
   }

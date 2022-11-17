@@ -12,7 +12,7 @@ const Login = () => {
             <form>
                 <div className="form-group ">
                     <label  >User Name</label>
-                    <input type="text" className="form-control " id="username"  placeholder="Enter Username" />
+                    <input type="text" className="form-control " id="username" placeholder="Enter Username" />
                 </div>
                 <div className="form-group ">
                     <label for="exampleInputPassword1">Password</label>
