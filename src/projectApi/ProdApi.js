@@ -1,13 +1,13 @@
 
-// const BASE = "http://localhost:8080"  // use this if running locally
-const BASE = "http://0.0.0.0:8080" // edit this with your AWS endpoint
+const BASE = "http://localhost:8080"  // use this if running locally
+// const BASE = "http://0.0.0.0:8080" // edit this with your AWS endpoint
 const URI = BASE + "/api"
 
 const ProdApi = {
     
     getAll: (setProductList) => {
 
-        fetch(URI + "/api/clothes")
+        fetch(URI + "/clothes")
             .then( result => result.json() )
             .then( data => {
                 setProductList(data)
@@ -17,7 +17,7 @@ const ProdApi = {
 
     add: (product) => {
         
-        fetch(URI + "/api/clothes", {
+        fetch(URI + "/clothes", {
             method: "POST",
             body: JSON.stringify(product),
             headers: { "Content-Type": "application/json" }
@@ -32,16 +32,18 @@ const ProdApi = {
 
                     alert(`PRODUCT CREATED \n` +
                         `------------------------\n` + 
-                        `ID: ${data.id}\n` +
-                        `First Name: ${data.firstName}\n` +
-                        `Last Name: ${data.lastName}\n` +
-                        `Email: ${data.email}\n` +
-                        `Department: ${data.department}\n` +
+                        `id: ${data.id}\n` +
+                        `name: ${data.name}\n` +
+                        `type: ${data.type}\n` +
+                        `gender: ${data.gender}\n` +
+                        `age: ${data.age}\n` +
+                        `color: ${data.color}\n` +
+                        `price: ${data.price}\n` +
                         `Image Path: ${data.imagePath}`
                     )
                 }
                 else {
-                    alert("product can't be created, check that you are not using an email already in use by another product.")
+                    alert("product can't be created.")
                 }
 
             } )
@@ -53,7 +55,7 @@ const ProdApi = {
 
     update: (product, productList, setProductList) => {
 
-        fetch(URI + "/api/clothes",  {
+        fetch(URI + "/clothes",  {
             method: 'PUT',
             body: JSON.stringify(product),
             headers: {  "Content-Type": "application/json" }
@@ -93,7 +95,7 @@ const ProdApi = {
 
     delete: (id) => {
 
-        fetch(URI + "/api/clothes/" + id, {
+        fetch(URI + "/clothes/" + id, {
             method: "DELETE"
         })
             .then( result => result.json() )
