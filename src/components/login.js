@@ -25,11 +25,8 @@ const Login = () => {
                     <label for="exampleInputPassword1">Password</label>
                     <input type="password" className="form-control" id="password" placeholder="Password" />
                 </div>
-                <div className="form-check ">
-                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                    <label className="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="button" className="btn btn-light " onClick={() => { handleLogin() }}>Login</button>
+               
+                <button type="button" className="btn btn-light m-3" onClick={() => { handleLogin() }}>Login</button>
             </form>
 
             <br></br>
