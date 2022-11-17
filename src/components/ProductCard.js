@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import AuthApi from '../projectApi/AuthApi';
 
 const ProductCard = (props) => {
 
@@ -47,6 +48,13 @@ const ProductCard = (props) => {
                         Remove from Cart
                     </button>
                 }
+
+                <button className='btn btn-primary card-btn'
+                    onClick={() => { AuthApi.authenticate('admin', '123') }}
+                >
+                    Login
+                </button>
+
             </div >
         </div >
     );
