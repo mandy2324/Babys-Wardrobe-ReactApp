@@ -20,7 +20,8 @@ code {
   background-image: url("./images/recycle.jpg");
   padding: 5%;
   color: rgba(25, 30, 3, 0.854);
-  margin: 2%;
+  max-width: 60%;
+  margin-top: 6rem;
 }
 
 a {
