@@ -1,11 +1,13 @@
 const BASE = "http://localhost:8080"  // use this if running locally
+//const BASE = "http://0.0.0.0:8080" // edit this with your AWS endpoint
+
 const URI = BASE + "/api"
 
 const UserApi = {
-    addUser: (user) => {
-        fetch(URI + "/user", {
+    addOrder: (order) => {
+        fetch(URI + "/order", {
             method: "POST",
-            body: JSON.stringify(user),
+            body: JSON.stringify(order),
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": 'Bearer ' + sessionStorage.getItem('jwt')
@@ -16,17 +18,15 @@ const UserApi = {
 
                 if (typeof data.id !== 'undefined') {
 
-                    console.log("CREATED USER:");
+                    console.log("CREATED ORDER:");
                     console.log(data);
 
                     alert(`PRODUCT CREATED \n` +
                         `------------------------\n` +
-                        `User ID: ${data.id}\n` +
-                        `Username: ${data.username}\n` +
-                        `Street: ${data.address.street}\n` +
-                        `City: ${data.address.city}\n` +
-                        `State: ${data.address.state}\n` +
-                        `Zip: ${data.address.zip}\n`
+                        `Order ID: ${data.id}\n` +
+                        `User ID: ${data.userId}\n` +
+                        `Purchases: ${data.purchases}\n` +
+                        `Price: ${data.price}\n`
                     )
                 }
                 else {
@@ -38,6 +38,7 @@ const UserApi = {
                 console.log(error);
             })
     }
+
 }
 
-export default UserApi;
+export default OrderApi;

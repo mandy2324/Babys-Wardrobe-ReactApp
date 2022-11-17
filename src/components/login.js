@@ -8,11 +8,7 @@ const Login = () => {
         let password = document.getElementById('password').value
         AuthApi.authenticate(username, password)
         // AuthApi.authenticate('admin', '123')
-      
     }
-
-
-
 
     return (
         <div className="container" id="login">
