@@ -1,5 +1,6 @@
 const BASE = "http://localhost:8080"  // use this if running locally
 //const BASE = "http://0.0.0.0:8080" // edit this with your AWS endpoint
+
 const URI = BASE + "/api"
 
 const ProdApi = {
@@ -15,7 +16,6 @@ const ProdApi = {
     },
 
     add: (product) => {
-
         fetch(URI + "/clothes", {
             method: "POST",
             body: JSON.stringify(product),
@@ -55,6 +55,7 @@ const ProdApi = {
     update: (product, productList, setProductList) => {
 
         fetch(URI + "/clothes", {
+
             method: 'PUT',
             body: JSON.stringify(product),
             headers: { "Content-Type": "application/json" }
