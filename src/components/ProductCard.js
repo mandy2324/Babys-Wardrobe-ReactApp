@@ -1,9 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import AuthApi from '../projectApi/AuthApi';
-
-
+import ProdApi from '../projectApi/ProdApi';
 
 const ProductCard= ( props) => {
+
+    const [inCart, setInCart] = useState(false)
+
+    useEffect(() => {
+        // Toggles Add to Cart button if product is already in cart
+        var found = props.cart.find(cartProduct => {
+            return cartProduct.id === props.product.id;
+        })
+
+        if (found) {
+            setInCart(true);
+        }
+        else {
+            setInCart(false);
+        }
+        console.log(props.cart) //todo remove
+    })
 
     const name = props.product.name ;
 
