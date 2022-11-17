@@ -80,6 +80,21 @@ const CreateProducts = () => {
                         />
                     </div>
 
+                    {/* Product Type  INPUT */}
+                    <div className='mb-3'>
+                        <label htmlFor='product-type'
+                            className='form-label'>
+                            Product Type
+                        </label>
+                        <input className='form-control'
+                            type='text'
+                            id='product-type'
+                            name='type'
+                            value={product.type}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
 
                     {/* Gender INPUT */}
                  
