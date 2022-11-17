@@ -15,6 +15,7 @@ const AuthApi = {
             .then(data => {
                 // Store JWT in session storage as plain text
                 sessionStorage.setItem('jwt', data.jwt)
+                console.log(data)
             })
             .catch(error => {
                 console.log(error);
