@@ -20,7 +20,7 @@ const ProdApi = {
             method: "POST",
             body: JSON.stringify(product),
             headers: { "Content-Type": "application/json",
-                        "Authorization": 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2OTA0NDcwNywiaWF0IjoxNjY4Njk5MTA3fQ.U2v6b0G4jLdbEkuRR1vhBBMQMcVyArrm0ZnIghKKLhI'
+                        "Authorization": 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjEiLCJleHAiOjE2NjkwNDYyMTQsImlhdCI6MTY2ODcwMDYxNH0.SyOdwyOd4JQ9MbEgHh8DYLzMSW3JiKskrtyEQa9so4Q'
                     }
         })
             .then(result => result.json())
@@ -35,9 +35,11 @@ const ProdApi = {
                         `------------------------\n` +
                         `ID: ${data.id}\n` +
                         `Name: ${data.name}\n` +
+                        `Type: ${data.type}\n` +
                         `Gender: ${data.gender}\n` +
                         `Age Group: ${data.age}\n` +
                         `Colors: ${data.color}\n` +
+                        `Price: ${data.price}\n` +
                         `Image Path: ${data.imagePath}`
                     )
                 }

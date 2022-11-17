@@ -41,11 +41,11 @@ a {
 
 #prodForm {
   margin-top: 10rem;
-
-  background-image: url("https://img.freepik.com/premium-vector/seamless-pattern-baby-clothes-pastel-color-vector-illustration-infant-cute-repeated-print_515275-259.jpg");
+max-width: 100%;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdYhLngvkIMgRxBMlv_VyjWscEEdXCxKcOAw&usqp=CAU");
 }
 
-.product-img {
+ .product-img {
   width: 15vw;
   height: auto;
 }
@@ -59,4 +59,4 @@ a {
 .card-btn {
   display: block;
   margin: auto;
-}
+} 
