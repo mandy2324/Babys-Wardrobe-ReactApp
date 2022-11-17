@@ -74,12 +74,6 @@ const ProductCard= ( props) => {
                 }
 
                 <button className='btn btn-primary card-btn'
-                    onClick={() => { AuthApi.authenticate('admin', '123') }}
-                >
-                    Login
-                </button>
-
-                <button className='btn btn-primary card-btn'
                         data-bs-toggle="offcanvas" 
                         data-bs-target="#productEditForm"
                         onClick={ () => { props.setToEdit(props.product) } }

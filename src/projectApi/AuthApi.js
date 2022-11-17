@@ -13,11 +13,9 @@ const AuthApi = {
         })
             .then(result => result.json())
             .then(data => {
-                
-                // Store JWT in session storage
-                sessionStorage.setItem('jwt', data) //data.jwt
+                // Store JWT in session storage as plain text
+                sessionStorage.setItem('jwt', data.jwt)
                 console.log(data)
-                console.log(sessionStorage.getItem('jwt'))
             })
             .catch(error => {
                 console.log(error);
@@ -26,4 +24,4 @@ const AuthApi = {
     }
 }
 
-export default AuthApi;
+export default AuthApi; 

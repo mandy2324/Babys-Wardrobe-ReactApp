@@ -3,7 +3,7 @@ import ProductCard from './ProductCard';
 import ProdApi from '../projectApi/ProdApi';
 
 
-const ProductsView = () => {
+const ProductsView = (props) => {
 
     const [displayEmpty, setDisplayEmpty] = useState(false)
     const [productList, setProductList] = useState([]);
@@ -63,6 +63,9 @@ const ProductsView = () => {
                     productList.map(p => <ProductCard key={p.id}
                         product={p}
                         productList={productList}
+                        cart={props.cart}
+                        addProduct={props.addProduct}
+                        removeProduct={props.removeProduct}
                         setProductList={setProductList}
                         setToEdit={setToEdit}
                     />
@@ -95,7 +98,7 @@ const ProductsView = () => {
                         <div className='mb-3'>
                             <label htmlFor='product-name'
                                 className='form-label'>
-                               Product Name
+                                Product Name
                             </label>
                             <input className='form-control'
                                 type='text'
@@ -127,7 +130,7 @@ const ProductsView = () => {
                         <div className='mb-3'>
                             <label htmlFor='product-gender'
                                 className='form-label'>
-                               Gender
+                                Gender
                             </label>
                             <input className='form-control'
                                 type='text'
@@ -137,7 +140,7 @@ const ProductsView = () => {
                                 onChange={handleChange}
                                 required
                             />
-                            
+
                         </div>
 
                         {/* age INPUT */}
@@ -156,7 +159,7 @@ const ProductsView = () => {
                             />
                         </div>
 
-                        
+
                         {/* color INPUT */}
                         <div className='mb-3'>
                             <label htmlFor='product-color'
@@ -173,7 +176,7 @@ const ProductsView = () => {
                             />
                         </div>
 
-                        
+
                         {/* price INPUT */}
                         <div className='mb-3'>
                             <label htmlFor='product-price'

@@ -19,9 +19,10 @@ const ProdApi = {
         fetch(URI + "/clothes", {
             method: "POST",
             body: JSON.stringify(product),
-            headers: { "Content-Type": "application/json",
-                        "Authorization": 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBZG1pbjEiLCJleHAiOjE2NjkwNDYyMTQsImlhdCI6MTY2ODcwMDYxNH0.SyOdwyOd4JQ9MbEgHh8DYLzMSW3JiKskrtyEQa9so4Q'
-                    }
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": 'Bearer ' + sessionStorage.getItem('jwt')
+            }
         })
             .then(result => result.json())
             .then(data => {

@@ -27,8 +27,6 @@ const CreateProducts = () => {
         console.log(product)    // TODO delete this
 
         ProdApi.add(product)
-        
-
         event.preventDefault()
     }
 
