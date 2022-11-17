@@ -7,10 +7,12 @@ const ProductsView = () => {
     const[productList, setProductList] = useState([]);
     const[ toEdit, setToEdit ] = useState({
         id: 0,
-        firstName: '',
-        lastName: '',
-        email: '',
-        department: '',
+        name: '',
+        type: '',
+        gender: '',
+        age: '',
+        color: '',
+        price: '',
         imagePath: ''
     });
 
