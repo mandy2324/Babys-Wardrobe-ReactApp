@@ -11,29 +11,52 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-#header{
+
+#header {
   background-image: url("./images/rainbow-bg.png");
 }
-.recycle{
-  background-image: url("./images/recycle.jpg");
-padding: 5%;
-color: rgba(25, 30, 3, 0.854);
-  margin: 2%;}
-  a{
-    text-decoration: none;
-    font-weight: bold;
-    color: rgba(6, 44, 6, 0.854);
-  }
-  .form-control{
-    width: 30%;
-  }
-  #login{
-    margin-top: 6rem;
-    max-width: 60%;
-    background-image: url("./images/loginbag.png");
-  }
-  #prodForm{
-    margin-top: 10rem;
 
-    background-image: url("https://img.freepik.com/premium-vector/seamless-pattern-baby-clothes-pastel-color-vector-illustration-infant-cute-repeated-print_515275-259.jpg");
-  }
+.recycle {
+  background-image: url("./images/recycle.jpg");
+  padding: 5%;
+  color: rgba(25, 30, 3, 0.854);
+  margin: 2%;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgba(6, 44, 6, 0.854);
+}
+
+.form-control {
+  width: 30%;
+}
+
+#login {
+  margin-top: 6rem;
+  max-width: 60%;
+  background-image: url("./images/loginbag.png");
+}
+
+#prodForm {
+  margin-top: 10rem;
+
+  background-image: url("https://img.freepik.com/premium-vector/seamless-pattern-baby-clothes-pastel-color-vector-illustration-infant-cute-repeated-print_515275-259.jpg");
+}
+
+.product-img {
+  width: 15vw;
+  height: auto;
+}
+
+.card {
+  width: 15vw;
+  margin: 0.5rem;
+  display: inline-block;
+}
+
+.card-btn {
+  display: block;
+  margin: auto;
+}
