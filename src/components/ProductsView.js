@@ -47,9 +47,9 @@ const ProductsView = (props) => {
     }
 
     return (
-        <div>
+        <div id="carddivmain">
 
-            <h2 className="display-3">Products</h2>
+            <h2 className="display-3 prodview">Products</h2>
 
             {
                 displayEmpty &&

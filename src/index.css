@@ -76,7 +76,7 @@ background-image: url("https://i0.wp.com/luamaralstudio.com/wp-content/uploads/2
 }
 .card-body{
   color:cadetblue;
-background-color: rgb(246, 246, 225);
+/* background-color: rgb(246, 246, 225); */
 }
 
 .h5.card-title{
@@ -84,10 +84,27 @@ background-color: rgb(246, 246, 225);
 
 }
 .col-3{
-  background-color: rgb(246, 246, 225);
+  /* background-color: rgb(246, 246, 225); */
+
+}
+.prodview{
+text-align: center;
+font-weight:400;
+padding: 1rem;
+color:rgb(29, 79, 79);
+
 
 }
 
+#carddivmain{
+  background-image: url( "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJzQ5N2WUHo28w_SgaPGZPYoDvm5YpSkHS-g&usqp=CAU" );
+
+}
+
+#product-cards{
+  background-image: url( " " );
+
+}
 #prodPage1 {
   /* background-image: url( " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlfL0aR2VKmD3g5GhdLUDql4zTH5Yh7uV5pg&usqp=CAU  " ); */
   margin-top: 10rem;
