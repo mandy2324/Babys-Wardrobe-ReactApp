@@ -5,10 +5,12 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Recycle from './components/Recycle';
 import Login from './components/login';
-import Signup from './components/Signup';
+import Signup from './components/signup';
 import ProductsView from './components/ProductsView';
 import CreateProducts from './components/CreateProducts';
 import Prod from './components/Prod';
+import Cart from './components/Cart';
+
 function App() {
   const [cart, setCart] = useState([]);
 

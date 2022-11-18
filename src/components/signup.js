@@ -19,51 +19,52 @@ const Signup = () => {
         <div id="signup" style={{
             width: "70%",
             margin: "0 auto",
-             padding: "0 auto"
-           
-        }}> 
-        <form>
-            <h3 >Signup Page</h3>
-            <div className="container">
-                <div className="form-row">
-                    <div className="form-group col-md-6">
-                        <label for="inputUsername4">Username</label>
-                        <input type="username" className="form-control" id="inputusername4" placeholder="" />
-                    </div>
-                    <div className="form-group col-md-6">
-                        <label for="inputPassword4">Password</label>
-                        <input type="password" className="form-control" id="inputPassword4" placeholder="" />
-                    </div>
-                </div>
+            padding: "0 auto"
+
+        }}>
+            <form>
+                <h3 >Signup Page</h3>
                 <div className="container">
-                    <br></br>
-                    <h5>Address</h5>
                     <div className="form-row">
                         <div className="form-group col-md-6">
-                            <label for="inputStreet">Street</label>
-                            <input type="text" className="form-control" id="inputStreet" />
+                            <label for="inputUsername">Username</label>
+                            <input type="username" className="form-control" id="inputUsername" placeholder="" />
                         </div>
                         <div className="form-group col-md-6">
-                            <label for="inputCity">City</label>
-                            <input type="text" className="form-control" id="inputCity" />
-
-
-                        </div>
-                        <div className="form-group col-md-6">
-                            <label for="inputState">State</label>
-                            <input type="text" className="form-control" id="inputState" />
-
-
-                        </div>
-                        <div className="form-group col-md-6">
-                            <label for="inputZip">Zip</label>
-                            <input type="text" className="form-control" id="inputZip" />
+                            <label for="inputPassword">Password</label>
+                            <input type="password" className="form-control" id="inputPassword" placeholder="" />
                         </div>
                     </div>
+                    <div className="container">
+                        <br></br>
+                        <h5>Address</h5>
+                        <div className="form-row">
+                            <div className="form-group col-md-6">
+                                <label for="inputStreet">Street</label>
+                                <input type="text" className="form-control" id="inputStreet" />
+                            </div>
+                            <div className="form-group col-md-6">
+                                <label for="inputCity">City</label>
+                                <input type="text" className="form-control" id="inputCity" />
 
+
+                            </div>
+                            <div className="form-group col-md-6">
+                                <label for="inputState">State</label>
+                                <input type="text" className="form-control" id="inputState" />
+
+
+                            </div>
+                            <div className="form-group col-md-6">
+                                <label for="inputZip">Zip</label>
+                                <input type="text" className="form-control" id="inputZip" />
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button type="button" className="btn btn-light m-3" onClick={() => { handleSignup() }}>Signup</button>
                 </div>
-
-                <button type="button" className="btn btn-light m-3" onClick={() => { handleSignup() }}>Signup</button>
             </form>
         </div>
     )
