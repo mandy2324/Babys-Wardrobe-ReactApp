@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <div id="header">
-            <h1 className="display-2 text-center">Baby's Wardrobe</h1>
+            <h1 id="productMain" className="display-2 text-center">Baby's Wardrobe</h1>
 
             <nav className="navbar navbar-expand-lg navbar-light ">
                 <div className="container-fluid">
 
-                    <Link className="navbar-brand font-weight-bold" to="/products" >Products</Link>
+                    <Link className="navbar-brand font-weight-bold" to="/prod" >Products</Link>
 
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -23,7 +23,6 @@ const Header = () => {
                             <Link className="nav-link font-weight-bold" to="/addProd">Add-Product</Link>
                             <Link className="nav-link font-weight-bold" to="/viewProducts">View-Products</Link>
                             <Link className="nav-link font-weight-bold" to="/recycle">Recycle</Link>
-                            <Link className="nav-link font-weight-bold" to="/products">Products</Link>
 
                         </div>
                     </div>
