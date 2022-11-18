@@ -12,12 +12,13 @@ import Prod from './components/Prod';
 function App() {
   const [cart, setCart] = useState([]);
 
-  const addProduct = (product) => {
+  const addProduct = (product, qty) => {
+    product.qty = qty
     setCart([...cart, product])
   }
 
   const updateProduct = (productId, qty) => {
-
+    console.log('todo: updateProduct')
   }
   const removeProduct = (productId) => {
     let newCart = [...cart];
@@ -39,8 +40,13 @@ function App() {
         <Route path="/recycle" element={<Recycle />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/cart" element={<Cart
+          cart={cart}
+          updateProduct={updateProduct}
+          removeProduct={removeProduct}
+        />} />
         <Route path="/addProd" element={<CreateProducts />} />
-        <Route path= "/prod" element={<Prod/>}/>
+        <Route path="/prod" element={<Prod />} />
         <Route path="/viewProducts" element={<ProductsView
           cart={cart}
           addProduct={addProduct}

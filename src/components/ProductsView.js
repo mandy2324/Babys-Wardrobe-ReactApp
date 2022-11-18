@@ -40,9 +40,7 @@ const ProductsView = (props) => {
     }
 
     const updateProduct = (event) => {
-
         ProdApi.update(toEdit, productList, setProductList)
-
         event.preventDefault()
     }
 

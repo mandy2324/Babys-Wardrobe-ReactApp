@@ -61,7 +61,11 @@ const ProdApi = {
 
             method: 'PUT',
             body: JSON.stringify(product),
-            headers: { "Content-Type": "application/json" }
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": 'Bearer ' + sessionStorage.getItem('jwt')
+            },
+
         })
             .then(result => result.json())
             .then(data => {
@@ -97,9 +101,11 @@ const ProdApi = {
     },
 
     delete: (id) => {
-
         fetch(URI + "/clothes/" + id, {
-            method: "DELETE"
+            method: "DELETE",
+            headers: {
+                "Authorization": 'Bearer ' + sessionStorage.getItem('jwt')
+            },
         })
             .then(result => result.json())
             .then(data => {
@@ -107,7 +113,6 @@ const ProdApi = {
                 console.log(data);
             })
             .catch(error => { console.log(error); })
-
     }
 }
 
