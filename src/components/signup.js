@@ -5,7 +5,7 @@ const Signup = () => {
         <div id = "signup"  style={{
             width: "70%",
             margin: "0 auto",
-            padding: "1rem"
+             padding: "0 auto"
            
         }}> 
         <form>
@@ -24,7 +24,7 @@ const Signup = () => {
             </div>
             <div className="container">
                 <br></br>
-                <h6>Address</h6>
+                <h5>Address</h5>
                 <div className="form-row">
                     <div className="form-group col-md-6">
                         <label for="inputStreet">Street</label>

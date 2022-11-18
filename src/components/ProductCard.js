@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import AuthApi from '../projectApi/AuthApi';
+// import AuthApi from '../projectApi/AuthApi';
 import ProdApi from '../projectApi/ProdApi';
 
 const ProductCard= ( props) => {
@@ -44,21 +44,21 @@ const ProductCard= ( props) => {
                  className='product-img'
                  />
 
-            <div className='card-body'>
+            <div className='card-body'  id="cardsProd">
 
                 <h5 className='card-title'>{name}</h5>
                 <p><strong>ID: </strong>{props.product.id}</p>
-                <p><strong>NAME </strong>{props.product.name}</p>
-                <p><strong>TYPE </strong>{props.product.type}</p>
-                <p><strong>GENDER</strong>{props.product.gender}</p>
-                <p><strong>AGE </strong>{props.product.age}</p>
-                <p><strong>COLOR </strong>{props.product.color}</p>
+                <p><strong>NAME: </strong>{props.product.name}</p>
+                <p><strong>TYPE:</strong>{props.product.type}</p>
+                <p><strong>GENDER:</strong>{props.product.gender}</p>
+                <p><strong>AGE: </strong>{props.product.age}</p>
+                <p><strong>COLOR: </strong>{props.product.color}</p>
 
-                <p><strong>PRICE </strong>{props.product.price}</p>
+                <p><strong>PRICE: </strong>{props.product.price}</p>
                   
                 {
                     !inCart &&
-                    <button className='btn btn-primary card-btn'
+                    <button className='btn btn-light card-btn'
                         onClick={() => { props.addProduct(props.product) }}
                     >
                         Add to Cart
@@ -66,21 +66,21 @@ const ProductCard= ( props) => {
                 }
                 {
                     inCart &&
-                    <button className='btn btn-primary card-btn'
+                    <button className='btn btn-light card-btn m-auto'
                         onClick={() => { props.removeProduct(props.product.id) }}
                     >
                         Remove from Cart
                     </button>
                 }
 
-                <button className='btn btn-primary card-btn'
+                <button className='btn btn-light card-btn m-auto'
                         data-bs-toggle="offcanvas" 
                         data-bs-target="#productEditForm"
                         onClick={ () => { props.setToEdit(props.product) } }
                         >
                     Edit
                 </button>
-                <button className='btn btn-danger card-btn'
+                <button className='btn btn-light card-btn m-auto'
                         onClick={ () => { handleDelete() } }
                         >
                     Delete

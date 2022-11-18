@@ -2,10 +2,10 @@ import React from 'react';
 
 const Recycle = () => {
     return (
-        <section className="recycle "style={{
+        <section className="recycle" style={{
             width: "70%",
             margin: "0 auto",
-            padding: "1rem"
+            padding: "0 auto"
            
         }}>  
             <div className="row" >

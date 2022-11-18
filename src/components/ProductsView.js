@@ -209,12 +209,9 @@ const ProductsView = (props) => {
                             />
                         </div>
 
-                        <button className='btn btn-primary'
+                        <button className='btn btn-light'
                             type='submit'
-                            data-bs-dismiss="offcanvas"
-                        >
-                            Update
-                        </button>
+                            data-bs-dismiss="offcanvas"> Update</button>
 
 
                     </form>
