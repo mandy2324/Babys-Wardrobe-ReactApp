@@ -40,15 +40,12 @@ const ProductsView = (props) => {
     }
 
     const updateProduct = (event) => {
-
         ProdApi.update(toEdit, productList, setProductList)
-
         event.preventDefault()
     }
 
     return (
         <div>
-
             <h2 className="display-3">Products</h2>
 
             {

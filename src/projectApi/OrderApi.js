@@ -3,7 +3,7 @@ const BASE = "http://localhost:8080"  // use this if running locally
 
 const URI = BASE + "/api"
 
-const UserApi = {
+const OrderApi = {
     addOrder: (order) => {
         fetch(URI + "/order", {
             method: "POST",

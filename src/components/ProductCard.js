@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import AuthApi from '../projectApi/AuthApi';
 import ProdApi from '../projectApi/ProdApi';
 
 const ProductCard= ( props) => {
@@ -24,13 +23,9 @@ const ProductCard= ( props) => {
     const name = props.product.name ;
 
     const handleDelete = () => {
-
         const newList = [...props.productList];
-
         const index = newList.indexOf(props.product);
-
         newList.splice(index, 1);
-
         props.setProductList(newList);
 
         ProdApi.delete(props.product.id);
@@ -59,7 +54,7 @@ const ProductCard= ( props) => {
                 {
                     !inCart &&
                     <button className='btn btn-primary card-btn'
-                        onClick={() => { props.addProduct(props.product) }}
+                        onClick={() => { props.addProduct(props.product, 1) }}
                     >
                         Add to Cart
                     </button>

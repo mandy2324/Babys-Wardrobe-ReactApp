@@ -42,11 +42,11 @@ a {
 
 #prodForm {
   margin-top: 10rem;
-max-width: 100%;
+  max-width: 100%;
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdYhLngvkIMgRxBMlv_VyjWscEEdXCxKcOAw&usqp=CAU");
 }
 
- .product-img {
+.product-img {
   width: 15vw;
   height: auto;
 }
@@ -60,11 +60,27 @@ max-width: 100%;
 .card-btn {
   display: block;
   margin: auto;
-} 
-#signup{
+}
+
+.cart-item {
+  width: 30%;
+  height: 10w;
+  margin: 0.5rem;
+  margin-left: 30%;
+}
+
+.cart-img {
+  width: auto;
+  height: 4vw;
+  float: left;
+}
+
+.cart-item-body {
+  text-align: right;
+}
+
+#signup {
   margin-top: 10rem;
   max-width: 100%;
-background-image: url("https://i0.wp.com/luamaralstudio.com/wp-content/uploads/2020/09/Aesthetic-fall-autumn-computer-wallpaper-backgrounds-desktop-31.png?resize=980%2C551");
-
-
+  background-image: url("https://i0.wp.com/luamaralstudio.com/wp-content/uploads/2020/09/Aesthetic-fall-autumn-computer-wallpaper-backgrounds-desktop-31.png?resize=980%2C551");
 }
