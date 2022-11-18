@@ -78,12 +78,14 @@ a {
 
 .cart-img {
   width: auto;
-  height: 4vw;
+  height: 5vw;;
   float: left;
+  border: 1px solid rgb(141, 136, 136);
 }
 
 .cart-item-body {
   text-align: right;
+
 }
 
 #signup {
@@ -144,5 +146,11 @@ a {
 
 #cardsProd {
   font-size: 0.75rem;
+
+}
+
+.shoppingCart{
+    background-image: url( "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWqZMyzXD5YJS5l9RpRAjrDOSEzuVDknK-m0AKp7PewxqQYMgsu9kWYWtWs0LL_5VpQJ4&usqp=CAU" );
+    max-width: 100%;
 
 }
