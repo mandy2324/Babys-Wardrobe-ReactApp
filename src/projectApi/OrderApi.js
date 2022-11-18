@@ -21,7 +21,7 @@ const OrderApi = {
                     console.log("CREATED ORDER:");
                     console.log(data);
 
-                    alert(`PRODUCT CREATED \n` +
+                    alert(`ORDER CREATED \n` +
                         `------------------------\n` +
                         `Order ID: ${data.id}\n` +
                         `User ID: ${data.userId}\n` +

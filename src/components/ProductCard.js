@@ -42,14 +42,10 @@ const ProductCard= ( props) => {
             <div className='card-body'  id="cardsProd">
 
                 <h5 className='card-title'>{name}</h5>
-                <p><strong>ID: </strong>{props.product.id}</p>
-                <p><strong>NAME: </strong>{props.product.name}</p>
-                <p><strong>TYPE:</strong>{props.product.type}</p>
-                <p><strong>GENDER:</strong>{props.product.gender}</p>
+                <p><strong>TYPE: </strong>{props.product.type}</p>
+                <p><strong>GENDER: </strong>{props.product.gender}</p>
                 <p><strong>AGE: </strong>{props.product.age}</p>
-                <p><strong>COLOR: </strong>{props.product.color}</p>
-
-                <p><strong>PRICE: </strong>{props.product.price}</p>
+                <p><strong>PRICE: $</strong>{props.product.price}</p>
                   
                 {
                     !inCart &&

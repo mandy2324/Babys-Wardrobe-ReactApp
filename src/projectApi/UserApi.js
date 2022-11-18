@@ -8,7 +8,6 @@ const UserApi = {
             body: JSON.stringify(user),
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": 'Bearer ' + sessionStorage.getItem('jwt')
             }
         })
             .then(result => result.json())
@@ -19,7 +18,7 @@ const UserApi = {
                     console.log("CREATED USER:");
                     console.log(data);
 
-                    alert(`PRODUCT CREATED \n` +
+                    alert(`USER CREATED \n` +
                         `------------------------\n` +
                         `User ID: ${data.id}\n` +
                         `Username: ${data.username}\n` +
