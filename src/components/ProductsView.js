@@ -45,8 +45,9 @@ const ProductsView = (props) => {
     }
 
     return (
-        <div>
-            <h2 className="display-3">Products</h2>
+        <div id="carddivmain">
+
+            <h2 className="display-3 prodview">Products</h2>
 
             {
                 displayEmpty &&
@@ -206,12 +207,9 @@ const ProductsView = (props) => {
                             />
                         </div>
 
-                        <button className='btn btn-primary'
+                        <button className='btn btn-light'
                             type='submit'
-                            data-bs-dismiss="offcanvas"
-                        >
-                            Update
-                        </button>
+                            data-bs-dismiss="offcanvas"> Update</button>
 
 
                     </form>

@@ -8,6 +8,7 @@ const Login = () => {
         let password = document.getElementById('password').value
         AuthApi.authenticate(username, password)
         // AuthApi.authenticate('admin', '123')
+        alert('Check the console!!');
     }
 
     return (

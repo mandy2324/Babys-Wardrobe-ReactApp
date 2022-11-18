@@ -8,9 +8,7 @@ import Login from './components/login';
 import Signup from './components/Signup';
 import ProductsView from './components/ProductsView';
 import CreateProducts from './components/CreateProducts';
-import Products from './components/Products';
-import Cart from './components/Cart';
-
+import Prod from './components/Prod';
 function App() {
   const [cart, setCart] = useState([]);
 
@@ -48,7 +46,7 @@ function App() {
           removeProduct={removeProduct}
         />} />
         <Route path="/addProd" element={<CreateProducts />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/prod" element={<Prod />} />
         <Route path="/viewProducts" element={<ProductsView
           cart={cart}
           addProduct={addProduct}

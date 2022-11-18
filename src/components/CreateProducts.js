@@ -50,7 +50,7 @@ const CreateProducts = () => {
                 style={{
                     width: "70%",
                     margin: "0 auto",
-                    padding: "1rem"
+                    padding: "0 auto"
                    
                 }}>
 
