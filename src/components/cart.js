@@ -24,7 +24,7 @@ const Cart = (props) => {
     })
 
     return (
-        <div>
+        <div className="shoppingCart">
             <h2 className="display-3">Shopping Cart</h2>
 
             {
@@ -34,7 +34,7 @@ const Cart = (props) => {
                 </div>
             }
 
-            <div id='cart-list'>
+            <div id='cart-list '>
                 {
                     props.cart.map(p => <CartCard key={p.id}
                         product={p}
@@ -47,7 +47,7 @@ const Cart = (props) => {
 
             {
                 !displayEmpty &&
-                <button className='btn btn-primary'
+                <button className='btn btn-light'
                     onClick={() => { handleCheckout() }}
                 >
                     Checkout

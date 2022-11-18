@@ -30,7 +30,7 @@ const OrderApi = {
                     )
                 }
                 else {
-                    alert("Failed to create product")
+                    alert("Failed to create order")
                 }
 
             })

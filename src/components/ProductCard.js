@@ -49,7 +49,7 @@ const ProductCard= ( props) => {
                   
                 {
                     !inCart &&
-                    <button className='btn btn-primary card-btn'
+                    <button className='btn btn-light card-btn'
                         onClick={() => { props.addProduct(props.product, 1) }}
                     >
                         Add to Cart
